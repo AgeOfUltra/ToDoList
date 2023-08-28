@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane fx:id="mainWindow" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.srikanth.todolist.HelloController">
+<!--    in the top position of the border Pane, we are using the menu to add new todoItems and update the old ones-->
+    <top>
+        <VBox>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="New" onAction="#showNewToDoItems"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="exit" onAction="#handleExit"/>
+            </Menu>
+        </MenuBar>
+        <ToolBar>
+            <HBox spacing="20">
+                <Button onAction="#showNewToDoItems">
+                    <tooltip >
+                        <Tooltip text="Add new Task"/>
+                    </tooltip>
+                    <graphic>
+                        <ImageView>
+<!--                            <Image url="@/toolbarButtonGraphics/general/New24.gif" />-->
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <ToggleButton fx:id="filterButton" text="Today's Item" onAction="#filterTodayItem">
+                    <tooltip>
+                        <Tooltip text="Button Down: Show today's items only. Button up:Show all items"/>
+                    </tooltip>
+                </ToggleButton>
+            </HBox>
+        </ToolBar>
+        </VBox>
+    </top>
+
+
+    <left>
+<!--        <ListView fx:id="todoListView" onMouseClicked="#handleClickedListview"> here we're removing the Action event handler because we have created a generic type event handler. -->
+        <ListView fx:id="todoListView" onKeyPressed="#handledKeyPressed">
+        </ListView>
+    </left>
+    <center>
+        <VBox style="-fx-background-color:white;">
+<!--     The VBox.grow tells us that always give us the as much room as possible to the text area, the VBox will size all the others it's children to it's preferred height and give the remaining space to the space area. -->
+            <TextArea fx:id="textAreaDetail" VBox.vgrow="ALWAYS">
+
+            </TextArea>
+
+            <HBox>
+                <Label text="Due :-" style="-fx-background-color:white;">
+                    <font>
+                        <Font name="Times New Roman bold" size="20"/>
+                    </font>
+                </Label>
+                <Label fx:id="deadLineLabel" style="-fx-background-color:white;">
+    <!--                <font>-->
+    <!--                    <Font name="Arial bold" size="20"/>-->
+    <!--                </font>-->
+                </Label>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

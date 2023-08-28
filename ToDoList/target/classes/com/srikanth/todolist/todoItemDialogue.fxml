@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.srikanth.todolist.DialogController">
+    <headerText>
+        * If you are not entering any field don't click OK.
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label  text="Short Description :" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="ShortDesc" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Details :" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="detail" GridPane.rowIndex="1" GridPane.columnIndex="1" WrapText="true"/>
+
+            <Label text="DeadLine :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="date" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        </GridPane>
+    </content>
+
+</DialogPane>
