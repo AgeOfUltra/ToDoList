@@ -25,6 +25,12 @@
             <artifactId>javafx-fxml</artifactId>
             <version>20</version>
         </dependency>
+        <dependency>
+            <groupId>net.java.linoleum</groupId>
+            <artifactId>jlfgr</artifactId>
+            <version>1_0</version>
+        </dependency>
+        <!-- Thanks for using https://jar-download.com -->
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>

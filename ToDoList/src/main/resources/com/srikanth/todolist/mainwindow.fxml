@@ -25,7 +25,9 @@
                     </tooltip>
                     <graphic>
                         <ImageView>
-<!--                            <Image url="@/toolbarButtonGraphics/general/New24.gif" />-->
+<!--                            <Image url="@/tool/general/New24.gif" />-->
+                            <Image url="@/toolbarButtonGraphics/general/New16.gif"/>
+
                         </ImageView>
                     </graphic>
                 </Button>
